@@ -1,0 +1,31 @@
+{
+  "name": "habit-tracker",
+  "version": "1.0.0",
+  "description": "Web application for tracking daily habits with Firebase integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -p 8000 -c-1",
+    "dev": "http-server -p 8000",
+    "build": "echo \"No build step required for this PWA\"",
+    "deploy": "firebase deploy",
+    "serve": "firebase serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "habit",
+    "tracker",
+    "firebase",
+    "web-app",
+    "pwa"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "firebase-tools": "^11.16.0",
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "firebase": "^9.23.0",
+    "firebaseui": "^6.0.1"
+  }
+}

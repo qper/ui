@@ -1,0 +1,424 @@
+/* ===================================
+   АДАПТИВНЫЕ СТИЛИ (RESPONSIVE)
+   =================================== */
+
+/* ===================================
+   СРЕДНИЕ ЭКРАНЫ (ПЛАНШЕТЫ)
+   =================================== */
+
+@media (max-width: 1024px) {
+    :root {
+        --font-size-h1: 26px;
+        --spacing-lg: 14px;
+        --spacing-xl: 20px;
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .chart-bars {
+        height: 180px;
+    }
+}
+
+/* ===================================
+   МАЛЫЕ ЭКРАНЫ (МОБИЛЬНЫЕ ТЕЛЕФОНЫ)
+   =================================== */
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-h1: 24px;
+        --font-size-h2: 18px;
+        --spacing-lg: 12px;
+        --spacing-xl: 16px;
+    }
+    
+    .page-content {
+        padding: var(--safe-area-inset-top) var(--safe-area-inset-right) 
+                 calc(70px + var(--safe-area-inset-bottom)) var(--safe-area-inset-left);
+    }
+    
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .calendar-week {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .calendar-day-habits {
+        min-height: 100px;
+    }
+    
+    .stats-overview {
+        grid-template-columns: 1fr;
+    }
+    
+    .habit-stat-row {
+        padding: var(--spacing-md) 0;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .auth-container {
+        max-width: 100%;
+    }
+}
+
+/* ===================================
+   ОЧЕНЬ МАЛЫЕ ЭКРАНЫ (МОБИЛЬНЫЕ)
+   =================================== */
+
+@media (max-width: 480px) {
+    :root {
+        --font-size-h1: 22px;
+        --font-size-h2: 16px;
+        --font-size-body: 15px;
+        --font-size-small: 13px;
+        --spacing-md: 10px;
+        --spacing-lg: 12px;
+        --spacing-xl: 16px;
+    }
+    
+    body {
+        font-size: var(--font-size-body);
+    }
+    
+    .page-content {
+        padding: var(--safe-area-inset-top) 8px 
+                 calc(70px + var(--safe-area-inset-bottom)) 8px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    h2 {
+        font-size: 16px;
+    }
+    
+    /* Улучшена касаемость */
+    .btn,
+    .form-control,
+    .card {
+        min-height: 44px;
+    }
+    
+    /* Calendar improvements */
+    .calendar-week {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+    
+    .calendar-day-header {
+        padding: var(--spacing-md);
+    }
+    
+    .calendar-day-date {
+        font-size: 16px;
+    }
+    
+    .calendar-day-habits {
+        min-height: 80px;
+    }
+    
+    /* Navigation fixes */
+    .bottom-nav {
+        height: 60px;
+    }
+    
+    .nav-label {
+        font-size: 11px;
+    }
+    
+    .nav-icon {
+        font-size: 20px;
+    }
+    
+    /* Forms improvements */
+    .form-checkbox,
+    .form-radio {
+        gap: var(--spacing-md);
+    }
+    
+    .form-checkbox input[type="checkbox"],
+    .form-radio input[type="radio"] {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .emoji-picker {
+        grid-template-columns: repeat(5, 1fr);
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+    
+    /* Cards improvements */
+    .card {
+        padding: var(--spacing-md);
+    }
+    
+    .habit-card {
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+    
+    .habit-icon {
+        font-size: 28px;
+    }
+    
+    /* Modal improvements */
+    .modal {
+        padding: var(--spacing-md);
+    }
+    
+    .modal-content {
+        border-radius: var(--radius-md);
+        padding: var(--spacing-lg);
+        max-width: 100%;
+    }
+    
+    /* Stats improvements */
+    .stats-overview {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .stat-box-value {
+        font-size: 28px;
+    }
+    
+    .chart-bars {
+        height: 120px;
+        gap: var(--spacing-sm);
+    }
+    
+    /* Button group */
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .btn-group .btn {
+        width: 100%;
+    }
+    
+    /* Toast container */
+    .toast-container {
+        left: var(--spacing-md);
+        right: var(--spacing-md);
+        bottom: calc(65px + var(--safe-area-inset-bottom));
+    }
+    
+    /* Auth screen */
+    .auth-header h1 {
+        font-size: 36px;
+    }
+    
+    .auth-header p {
+        font-size: 13px;
+    }
+}
+
+/* ===================================
+   ОЧЕНЬ БОЛЬШИЕ ЭКРАНЫ (ДЕСКТОП)
+   =================================== */
+
+@media (min-width: 1200px) {
+    :root {
+        --font-size-h1: 32px;
+        --font-size-h2: 24px;
+        --spacing-lg: 18px;
+        --spacing-xl: 32px;
+    }
+    
+    .page-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: calc(24px + var(--safe-area-inset-left));
+        padding-right: calc(24px + var(--safe-area-inset-right));
+    }
+    
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .calendar-week {
+        grid-template-columns: repeat(7, 1fr);
+    }
+    
+    .stats-overview {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===================================
+   iPhone Pro Max (390px, 430px)
+   =================================== */
+
+@media (width: 390px) or (width: 430px) {
+    .page-content {
+        padding: var(--safe-area-inset-top) 12px 
+                 calc(70px + var(--safe-area-inset-bottom)) 12px;
+    }
+    
+    .calendar-week {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===================================
+   Safe Area для iPhone X и выше
+   =================================== */
+
+@supports (padding: max(0px)) {
+    .page-content {
+        padding-left: max(12px, var(--safe-area-inset-left));
+        padding-right: max(12px, var(--safe-area-inset-right));
+        padding-top: max(12px, var(--safe-area-inset-top));
+        padding-bottom: max(70px, var(--safe-area-inset-bottom));
+    }
+    
+    .bottom-nav {
+        padding-bottom: max(0px, var(--safe-area-inset-bottom));
+    }
+    
+    .toast-container {
+        bottom: max(70px, calc(70px + var(--safe-area-inset-bottom)));
+    }
+}
+
+/* ===================================
+   Landscape режим
+   =================================== */
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .page-content {
+        padding: 8px 12px calc(60px + var(--safe-area-inset-bottom)) 12px;
+    }
+    
+    .bottom-nav {
+        height: 50px;
+    }
+    
+    .calendar-week {
+        grid-template-columns: repeat(7, 1fr);
+    }
+    
+    .calendar-day-habits {
+        min-height: 60px;
+    }
+}
+
+/* ===================================
+   Контрастный режим
+   =================================== */
+
+@media (prefers-contrast: more) {
+    :root {
+        --color-text-primary: #000000;
+        --color-text-secondary: #333333;
+        --color-inactive: #CCCCCC;
+    }
+}
+
+/* ===================================
+   Тёмный режим (если будет реализован)
+   =================================== */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg-primary: #1a1a1a;
+        --color-bg-secondary: #2d2d2d;
+        --color-text-primary: #ffffff;
+        --color-text-secondary: #b0b0b0;
+    }
+}
+
+/* ===================================
+   High DPI экраны
+   =================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+    .btn,
+    .form-control,
+    input,
+    button {
+        border-width: 1px;
+    }
+}
+
+/* ===================================
+   Touch device optimizations
+   =================================== */
+
+@media (hover: none) and (pointer: coarse) {
+    /* Увеличиваем размер интерактивных элементов */
+    .btn {
+        min-height: 48px;
+        padding: 12px 20px;
+    }
+    
+    .btn-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .form-control {
+        padding: 12px 16px;
+        font-size: 16px; /* Предотвращает зум на iPhone */
+    }
+    
+    /* Убираем hover эффекты */
+    .btn:hover {
+        background-color: inherit;
+        box-shadow: inherit;
+    }
+    
+    .card:hover {
+        transform: inherit;
+        box-shadow: inherit;
+    }
+    
+    /* Улучшаем фокус */
+    .btn:focus-visible {
+        outline: 3px solid var(--color-accent);
+        outline-offset: 2px;
+    }
+}
+
+/* ===================================
+   Scroll behavior
+   =================================== */
+
+@supports (scroll-behavior: smooth) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* ===================================
+   Position sticky fallback
+   =================================== */
+
+@supports not (position: sticky) {
+    .sticky {
+        position: relative;
+    }
+}

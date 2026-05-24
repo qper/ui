@@ -1,0 +1,325 @@
+/* ===================================
+   СТИЛИ ДЛЯ СТАТИСТИКИ
+   =================================== */
+
+.statistics-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+/* Stats overview */
+.stats-overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.stat-box {
+    background-color: var(--color-bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.stat-box-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-accent);
+    line-height: 1;
+}
+
+.stat-box-label {
+    font-size: var(--font-size-small);
+    color: var(--color-text-secondary);
+    margin-top: var(--spacing-sm);
+}
+
+/* Chart container */
+.chart-container {
+    background-color: var(--color-bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+}
+
+.chart-title {
+    font-size: var(--font-size-h2);
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Bar chart */
+.chart-bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 200px;
+    gap: var(--spacing-md);
+}
+
+.chart-bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: var(--spacing-sm);
+}
+
+.chart-bar {
+    width: 100%;
+    max-width: 40px;
+    height: 100%;
+    background: linear-gradient(to top, var(--color-accent), rgba(74, 144, 226, 0.3));
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+}
+
+.chart-bar:active {
+    opacity: 0.8;
+    transform: translateY(-4px);
+}
+
+.chart-label {
+    font-size: var(--font-size-tiny);
+    color: var(--color-text-secondary);
+    text-align: center;
+}
+
+/* Habit stats row */
+.habit-stat-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--color-inactive);
+}
+
+.habit-stat-row:last-child {
+    border-bottom: none;
+}
+
+.habit-stat-icon {
+    font-size: 28px;
+    min-width: 44px;
+}
+
+.habit-stat-info {
+    flex: 1;
+}
+
+.habit-stat-name {
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.habit-stat-progress {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+.habit-stat-progress-bar {
+    flex: 1;
+    height: 6px;
+    background-color: var(--color-inactive);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.habit-stat-progress-fill {
+    height: 100%;
+    background-color: var(--color-success);
+    transition: width var(--transition-normal);
+}
+
+.habit-stat-percentage {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    min-width: 40px;
+    text-align: right;
+}
+
+.habit-stat-streak {
+    font-size: var(--font-size-small);
+    color: var(--color-text-secondary);
+}
+
+/* Stats filters */
+.stats-filters {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--color-inactive);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-size: var(--font-size-small);
+}
+
+.filter-btn.active {
+    background-color: var(--color-accent);
+    color: var(--color-text-on-dark);
+    border-color: var(--color-accent);
+}
+
+/* Date range picker */
+.date-range-picker {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.date-range-picker input {
+    padding: 8px 12px;
+    border: 1px solid var(--color-inactive);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-small);
+}
+
+/* Top habits/Bottom habits */
+.top-habits,
+.bottom-habits {
+    background-color: var(--color-bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.top-habits h3,
+.bottom-habits h3 {
+    margin-bottom: var(--spacing-lg);
+}
+
+.habit-rank {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--color-inactive);
+}
+
+.habit-rank:last-child {
+    border-bottom: none;
+}
+
+.habit-rank-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-accent);
+    min-width: 32px;
+    text-align: center;
+}
+
+.habit-rank-info {
+    flex: 1;
+}
+
+.habit-rank-name {
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.habit-rank-value {
+    font-size: var(--font-size-small);
+    color: var(--color-text-secondary);
+}
+
+/* Streak indicator */
+.streak-indicator {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background-color: rgba(107, 155, 55, 0.1);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-success);
+}
+
+.streak-number {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-success);
+}
+
+.streak-label {
+    font-size: var(--font-size-small);
+    color: var(--color-text-secondary);
+}
+
+/* Empty state */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-2xl);
+    text-align: center;
+}
+
+.empty-state-icon {
+    font-size: 64px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.empty-state-title {
+    font-size: var(--font-size-h2);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.empty-state-text {
+    font-size: var(--font-size-small);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .stats-overview {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-bars {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-overview {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-bars {
+        height: 120px;
+    }
+    
+    .stats-filters {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .filter-btn {
+        flex: 1;
+    }
+    
+    .date-range-picker {
+        flex-direction: column;
+    }
+    
+    .date-range-picker input {
+        width: 100%;
+    }
+}
