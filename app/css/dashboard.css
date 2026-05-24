@@ -1,0 +1,336 @@
+/* ===================================
+   НИЖНЯЯ НАВИГАЦИЯ
+   =================================== */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-inactive);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: var(--spacing-sm);
+    z-index: 50;
+    padding-bottom: max(var(--spacing-md), var(--safe-area-inset-bottom));
+}
+
+.nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: var(--spacing-sm);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    transition: color var(--transition-fast);
+    min-width: 60px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-btn.nav-btn-active {
+    color: var(--color-accent);
+}
+
+.nav-icon {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.nav-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    line-height: 1;
+}
+
+@media (max-width: 480px) {
+    .bottom-nav {
+        height: 60px;
+        padding-top: var(--spacing-xs);
+    }
+    
+    .nav-btn {
+        min-width: 50px;
+        gap: 1px;
+    }
+    
+    .nav-icon {
+        font-size: 20px;
+    }
+    
+    .nav-label {
+        font-size: 10px;
+    }
+}
+
+/* ===================================
+   СТРАНИЦА ПРОФИЛЯ
+   =================================== */
+
+.profile-header {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    color: var(--color-text-on-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.profile-name {
+    font-size: var(--font-size-h1);
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+}
+
+.profile-email {
+    font-size: var(--font-size-small);
+    color: var(--color-text-secondary);
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.profile-stat {
+    text-align: center;
+}
+
+.profile-stat-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.profile-stat-label {
+    font-size: var(--font-size-tiny);
+    color: var(--color-text-secondary);
+    margin-top: var(--spacing-xs);
+}
+
+.profile-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.profile-section-title {
+    font-size: var(--font-size-h2);
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-inactive);
+}
+
+.profile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.profile-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-inactive);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.profile-menu-item:first-child {
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.profile-menu-item:last-child {
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    border-bottom: none;
+}
+
+.profile-menu-item:active {
+    background-color: rgba(74, 144, 226, 0.05);
+}
+
+.profile-menu-label {
+    font-weight: 600;
+}
+
+.profile-menu-arrow {
+    font-size: 18px;
+    color: var(--color-text-secondary);
+}
+
+.profile-logout {
+    margin-top: var(--spacing-xl);
+}
+
+/* ===================================
+   СТРАНИЦА НАСТРОЕК
+   =================================== */
+
+.settings-section {
+    margin-bottom: var(--spacing-xl);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+}
+
+.settings-section-title {
+    font-size: var(--font-size-h2);
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-inactive);
+}
+
+.settings-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-lg) 0;
+    border-bottom: 1px solid var(--color-inactive);
+}
+
+.settings-item:last-child {
+    border-bottom: none;
+}
+
+.settings-label {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.settings-label-main {
+    font-weight: 600;
+}
+
+.settings-label-sub {
+    font-size: var(--font-size-small);
+    color: var(--color-text-secondary);
+}
+
+.settings-control {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+/* Toggle switch */
+.toggle-switch {
+    width: 50px;
+    height: 28px;
+    background-color: var(--color-inactive);
+    border-radius: 14px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.toggle-switch.active {
+    background-color: var(--color-success);
+}
+
+.toggle-switch::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: left var(--transition-fast);
+}
+
+.toggle-switch.active::after {
+    left: 24px;
+}
+
+/* Number input */
+.number-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-inactive);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-primary);
+}
+
+.number-input button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-input input {
+    width: 60px;
+    border: none;
+    border-left: 1px solid var(--color-inactive);
+    border-right: 1px solid var(--color-inactive);
+    text-align: center;
+    background: none;
+}
+
+.number-input input:focus {
+    outline: none;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .profile-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-header {
+        padding: var(--spacing-lg);
+    }
+    
+    .profile-avatar {
+        width: 64px;
+        height: 64px;
+        font-size: 28px;
+    }
+    
+    .profile-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .settings-section {
+        padding: var(--spacing-md);
+    }
+    
+    .settings-item {
+        padding: var(--spacing-md) 0;
+    }
+}
