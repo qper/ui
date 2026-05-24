@@ -35,7 +35,11 @@
   },
   "auth": {
     "providers": {
-      "emailPassword": true
+      "emailPassword": true,
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "Tracker",
+        "supportEmail": "asitnn@gmail.com"
+      }
     }
   }
 }
